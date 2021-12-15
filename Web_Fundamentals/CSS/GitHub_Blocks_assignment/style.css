@@ -1,0 +1,22 @@
+img{
+    height: 200px;
+}
+#container>*{
+    margin: 5px;
+    text-align: center;
+    width: 950px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+.top_row{
+    background-color: burlywood;
+}
+.mid_row{
+    background-color: deepskyblue;
+}
+.bot_row{
+    background-color: lightcoral;
+}
