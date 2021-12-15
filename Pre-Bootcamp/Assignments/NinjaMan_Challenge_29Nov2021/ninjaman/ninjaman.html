@@ -111,13 +111,13 @@
         </style>
     </head>
 <body>
-<div id='world'></div>
-<div id='ninjaman'></div>
-
+    <div id='world'></div>
+    <div id='ninjaman'></div>
+    <div><a id="score" href="ninjaman.html"></a></div>
 </body>
 <script type="text/javascript">
-
-
+    
+    
     var world = [
         [1,1,1,1,1],
         [1,0,Math.floor(Math.random()*2+2),Math.floor(Math.random()*2+2),1],
@@ -145,83 +145,87 @@
     }
     function drawWorld(){
         output="";
-
+        
         for(var row = 0; row < world.length; row++){
             output += "<div class = 'row'>"
-            for(var x=0; x < world[row].length;x++){
-                output += "<div class = '"+ worldDict[world[row][x]] +"'></div>"
-                //console.log("element: ", worldDict[world[row][x]])
+                for(var x=0; x < world[row].length;x++){
+                    output += "<div class = '"+ worldDict[world[row][x]] +"'></div>"
+                    //console.log("element: ", worldDict[world[row][x]])
+                }
+                output += "</div>"
             }
-            output += "</div>"
+            document.getElementById('world').innerHTML =output;
         }
-        document.getElementById('world').innerHTML =output;
-    }
-drawWorld();
+        drawWorld();
+        
+        var ninjaman = {
+            x:1,
+            y:1
+        }
+        
+        var score =0;
+        function drawNinjaman(){
+            document.getElementById("ninjaman").style.left = ninjaman.x * 40 + "px";
+            document.getElementById("ninjaman").style.top = ninjaman.y * 40 + "px";
+        }
+        drawNinjaman()
+        
+        document.onkeydown = function(e){
+            if(e.keyCode ==37){
+                if(world[ninjaman.y][ninjaman.x-1]!=1){
+                    if(world[ninjaman.y][ninjaman.x-1]==2){
+                        score = score+10
+                    }
+                    else if(world[ninjaman.y][ninjaman.x-1]==3){
+                        score =score+5
+                    }
+                    ninjaman.x--;
+                }
+            }
+            else if(e.keyCode ==39){
+                if(world[ninjaman.y][ninjaman.x+1]!=1){
+                    if(world[ninjaman.y][ninjaman.x+1]==2){
+                        score = score+10
+                    }
+                    else if(world[ninjaman.y][ninjaman.x+1]==3){
+                        score =score+5
+                    }
+                    ninjaman.x++;
+                }
+            }
+            else if(e.keyCode ==40){
+                if(world[ninjaman.y+1][ninjaman.x]!=1){
+                    if(world[ninjaman.y+1][ninjaman.x]==2){
+                        score = score+10
+                    }
+                    else if(world[ninjaman.y+1][ninjaman.x]==3){
+                        score =score+5
+                    }
+                    ninjaman.y++;
+                }
+            }
+            else if(e.keyCode ==38){
+                if(world[ninjaman.y-1][ninjaman.x]!=1){
+                    if(world[ninjaman.y-1][ninjaman.x]==2){
+                        score = score+10
+                    }
+                    else if(world[ninjaman.y-1][ninjaman.x]==3){
+                        score =score+5
+                    }
+                    ninjaman.y--;
+                }
+            }
+            world[ninjaman.y][ninjaman.x]=0;
+            drawNinjaman()
+            drawWorld()
+            console.log(score)
+            document.getElementById("score").innerHTML = splitText
+        }
+        
+    </script>
+    
+    
 
-var ninjaman = {
-    x:1,
-    y:1
-}
-
-var score =0;
-function drawNinjaman(){
-    document.getElementById("ninjaman").style.left = ninjaman.x * 40 + "px";
-    document.getElementById("ninjaman").style.top = ninjaman.y * 40 + "px";
-}
-drawNinjaman()
-
-document.onkeydown = function(e){
-    if(e.keyCode ==37){
-        if(world[ninjaman.y][ninjaman.x-1]!=1){
-            if(world[ninjaman.y][ninjaman.x-1]==2){
-                score = score+10
-            }
-            else if(world[ninjaman.y][ninjaman.x-1]==3){
-                score =score+5
-            }
-        ninjaman.x--;
-        }
-    }
-    else if(e.keyCode ==39){
-        if(world[ninjaman.y][ninjaman.x+1]!=1){
-            if(world[ninjaman.y][ninjaman.x+1]==2){
-                score = score+10
-            }
-            else if(world[ninjaman.y][ninjaman.x+1]==3){
-                score =score+5
-            }
-        ninjaman.x++;
-        }
-    }
-    else if(e.keyCode ==40){
-        if(world[ninjaman.y+1][ninjaman.x]!=1){
-            if(world[ninjaman.y+1][ninjaman.x]==2){
-                score = score+10
-            }
-            else if(world[ninjaman.y+1][ninjaman.x]==3){
-                score =score+5
-            }
-        ninjaman.y++;
-        }
-    }
-    else if(e.keyCode ==38){
-        if(world[ninjaman.y-1][ninjaman.x]!=1){
-            if(world[ninjaman.y-1][ninjaman.x]==2){
-                score = score+10
-            }
-            else if(world[ninjaman.y-1][ninjaman.x]==3){
-                score =score+5
-            }
-        ninjaman.y--;
-        }
-    }
-    world[ninjaman.y][ninjaman.x]=0;
-    drawNinjaman()
-    drawWorld()
-    console.log(score)
-}
-
-</script>
 
 
 </html>
