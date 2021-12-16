@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top_nav">
+            <h1>Profile</h1>
+            <p>Home</p>
+            <span><p>My Profile</p> <!--while font--></span>
+            <p>Find Connections</p>
+            <button>Sign Out</button>
+        </div>
+        <div class="main">
+
+            <!-- left column -->
+            <div class="left_col">
+                <!-- user_card starts here -->
+                <div class="user_card">
+                    <div class="uc_top_row"></div>
+                        <img src="icons/user-circle.png" alt="user-circle" id="uc_user-circle">
+                        <div class="uc_name">
+                            <h1>Jane Doe</h1>
+                        </div>
+                        <div class="uc_location">
+                                <img src="icons/map-marker.png" alt="map-marker" id="uc_map-marker">
+                                Seattle
+                        </div>
+                        <div class="uc_title">
+                            <p>Developer | Engineer | Problem Solver</p>
+                        </div>
+                        <div class="uc_detail">
+                            <p>Master of shadows and the Internet!</p>
+                        </div>
+                        <div class="uc_edit">
+                            <img src="icons/gear.png" alt="gear" id="uc_gear">
+                            <a href="#">edit profile</a>
+                        </div>
+                </div>
+                <!-- user_card ends here -->
+
+                <div class="education">
+                    <div class="ed_top_row"><p>Education</p></div>
+                    <div class="ed_details">
+                        <div class="ed_program_name"><p>Coding Dojo - Full Stack Bootcamp</p></div>
+                        <div class="ed_program_timeline"><p>Dec 2019 - Mar 2020</p></div>
+                        <div class="ed_program_details"><p>Triple black belt in Python, MERN, and C#...</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- right column -->
+            <div class="right_col">
+                <div class="connection_request">
+                    <div class="cr_top_row">
+                        <div class="cr_tr_countcircle"><p>2</p></div>
+                        <div class="cr_tr_text"><p>Connection Requests</p></div>
+                    </div>
+                    <div class="cr_main">
+                        <div class="cr_main_Todd">
+                            <img src="icons/user-circle.png" alt="user-circle" id="cr_main_user-circle">
+                            <p>Todd E</p>
+                            <img src="icons/accept-circle.png" alt="accept-circle" id="cr_main_accept-circle">
+                            <img src="icons/close-circle.png" alt="close-circle" id="cr_main_close-circle">
+                        </div>
+                        <div class="cr_main_Phil">
+                            <img src="icons/user-circle.png" alt="user-circle" id="cr_main_user-circle">
+                            <p>Phil K</p>
+                            <img src="icons/accept-circle.png" alt="accept-circle" id="cr_main_accept-circle">
+                            <img src="icons/close-circle.png" alt="close-circle" id="cr_main_close-circle">
+                        </div>
+                    </div>
+                </div>
+                <div class="your_connection">
+                    <div class="yc_top_row">
+                        <div class="yc_tr_countcircle"><p>500+</p></div>
+                        <div class="yc_tr_text"><p>Your Connections</p></div>
+                    </div>
+
+                    <div class="yc_main">
+                        <div class="yc_main_Adrien">
+                            <img src="icons/user-circle.png" alt="user-circle" id="yc_main_user-circle">
+                            <p>Adrien D</p>
+                        </div>
+                        <div class="yc_main_Anne">
+                            <img src="icons/user-circle.png" alt="user-circle" id="yc_main_user-circle">
+                            <p>Anne J</p>
+                        </div>
+                        <div class="yc_main_Alayne">
+                            <img src="icons/user-circle.png" alt="user-circle" id="yc_main_user-circle">
+                            <p>Alayne J</p>
+                        </div>
+                        <div class="yc_main_Arry">
+                            <img src="icons/user-circle.png" alt="user-circle" id="yc_main_user-circle">
+                            <p>Arry Y</p>
+                        </div>
+                    </div>
+
+                    <div class="yc_bot_row">
+                        <a href="#">view More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

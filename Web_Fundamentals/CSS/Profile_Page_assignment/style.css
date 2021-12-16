@@ -1,0 +1,293 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#container{
+    width: 1200px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+
+/* TOP Nav */
+.top_nav{
+    width: inherit;
+    height: 50px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 5px;
+}
+.top_nav > h1{
+    position: relative;
+    left: 80px;
+    color: white;
+}
+.top_nav>p{
+    color: cyan;
+    margin-left: 10px;
+    position: relative;
+    top: 15px;
+    left: 80px;
+}
+span>p{
+    color: white;
+    margin-left: 10px;
+    position: relative;
+    top: 15px;
+    left: 80px;
+}
+button{
+    height: 20px;
+    width: 70px;
+    position: relative;
+    left: 480pt;
+    top: 15px;
+    background-color: #32a2b8;
+    color: white;
+}
+
+
+/* Main */
+.main{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+/* Main - Left Column */
+.left_col{
+    flex:2;
+    margin-left: 80px;
+}
+.user_card{
+    width: 700px;
+    border:  #cccccc solid 2px;
+}
+.uc_top_row{
+    width: inherit;
+    height: 70px;
+    background-color: #32a2b8;
+}
+
+#uc_user-circle{
+    width: 70px;
+    position: relative;
+    top: -35px;
+    left: 30px;
+    border: #cccccc double 2px;
+    border-radius: 50%;
+}
+.uc_name{
+    position: relative;
+    top: -35px;
+    left: 30px;
+    color: black;
+}
+.uc_location{
+    position: relative;
+    top: -30px;
+    left: 30px;
+}
+#uc_map-marker{
+    width: 10px;
+    margin-right: 5px;
+}
+.uc_title{
+    position: relative;
+    left: 30px;
+    top: -20px;
+}
+.uc_detail{
+    position: relative;
+    left: 30px;
+    top: -20px;
+}
+.uc_edit{
+    position: relative;
+    left: 30px;
+    margin-bottom: 10px;
+}
+#uc_gear{
+    width: 15px;
+}
+
+
+.education{
+    width: 700px;
+    border: #cccccc solid 2px;
+    margin-top: 50px;
+}
+
+.ed_top_row{
+    width: inherit;
+    height: 30px;
+    background-color: #333333;
+    color: white;
+}
+.ed_top_row > p{
+    position: relative;
+    top: 5px;
+    left: 30px;
+}
+.ed_details{
+    margin-top: 10px;
+    position: relative;
+    left: 30px;
+}
+.ed_program_name{
+    font-size: 25px;
+}
+.ed_program_timeline{
+    font-size: 20px;
+    color: #777777;
+}
+.ed_program_details{
+    margin-top: 5px;
+}
+
+
+/* Main - Right Column */
+.right_col{
+    flex:1;
+    margin-left: 30px;
+}
+
+.connection_request{
+    width: 300px;
+    height: 130px;
+    border:  #cccccc solid 2px;
+}
+
+.cr_top_row{
+    width: inherit;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    color: white;
+}
+.cr_top_row > .cr_tr_countcircle{
+    width: 20px;
+    height: 20px;
+    color: black;
+    background-color: #cccccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.cr_tr_text{
+    position: relative;
+    top: 10px;
+    left: 30px;
+    margin-left: 10px;
+}
+.cr_main{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.cr_main_Todd{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.cr_main_Todd >p{
+    margin-right: 140px;
+}
+
+.cr_main_Phil{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.cr_main_Phil >p{
+    margin-right: 145px;
+}
+
+#cr_main_user-circle{
+    width: 25px;
+}
+#cr_main_accept-circle{
+    width: 25px;
+}
+#cr_main_close-circle{
+    width: 25px;
+}
+
+
+
+.your_connection{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    border:  #cccccc solid 2px;
+}
+.yc_top_row{
+    width: inherit;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+    color: white;
+}
+
+
+#yc_main_user-circle{
+    width: 25px;
+}
+
+.yc_top_row > .yc_tr_countcircle{
+    width: 50px;
+    height: 20px;
+    color: black;
+    background-color: #cccccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+    left: 30px;
+}
+.yc_tr_text{
+    position: relative;
+    top: 10px;
+    left: 30px;
+    margin-left: 10px;
+}
+
+.yc_main{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.yc_main>div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.yc_bot_row{
+    border: #cccccc solid 2px;
+    position: relative;
+    top: 38px;
+    width: inherit;
+    height: 30px;
+    left: -2px;
+    align-content: flex-end;
+}
+
+.yc_bot_row>a{
+    position: relative;
+    left: 30px;
+}
