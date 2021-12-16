@@ -1,12 +1,12 @@
 // Functions
 
-// 1. DEFINE THE FUNCTION - num1 and num2 are parameters
+// 1. DEFINE THE FUNCTION
 function add(num1, num2){
-    return num1+num2 //argument
+    return num1+num2 //parameter
 }
 
 // 2. CALL THE FUNCTION
-console.log(add(4,9))
+console.log(add(4,9))//argument
 
 // PARAMETER AND ARGUMENTS
 // for loop needs semi-column at the end of the line
