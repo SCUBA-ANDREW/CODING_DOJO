@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 600px;
+    height: 300px;
+    border: #d8d8d8 solid 2px;
+    display: flex;
+}
+.top_row{
+    background-color: #32a2b8;
+    width: inherit;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+}
+#user-circle{
+    width: 50px;
+    border: #cdcdcd double;
+    border-radius: 50%;
+    position: absolute;
+    top: 70px;
+}
+.name{
+    position: absolute;
+    top: 120px;
+    color: black;
+}
+#map-marker{
+    width: 20px;
+}
+#gear{
+    width: 20px;
+}
+.location{
+    justify-content: flex-start;
+    align-content: flex-start;
+    position: absolute;
+    top: 160px;
+}
+.title{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: absolute;
+    top: 200px;
+}
+.detail{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: absolute;
+    top: 220px;
+}
+.edit{
+    align-content: flex-end;
+    justify-content: flex-start;
+    position: absolute;
+    top: 270px;
+}
