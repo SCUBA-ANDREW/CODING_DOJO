@@ -1,16 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 img{
     height: 200px;
 }
-#container>*{
+#container{
     margin: 5px;
     text-align: center;
     width: 950px;
     border: none;
+    padding: 20px;
+}
+#container >div{
+    width: inherit;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 20px 0px;
 }
+
 .top_row{
     background-color: burlywood;
 }

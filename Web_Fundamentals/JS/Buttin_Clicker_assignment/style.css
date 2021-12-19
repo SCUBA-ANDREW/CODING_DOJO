@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    
+    width: 800px;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+}
+
+.top_nav{
+    width: 740px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+    background-color: #cccccc;
+}
+.top_nav >h1{
+    color: #040404;
+}
+.top_nav > #search_bar{
+    width: 300px;
+    height: 20px;
+    border: black solid 2px;
+}
+.top_nav > button{
+    width: 70px;
+    padding:3px 5px;
+    background-color: #2b78e4;
+    color: white;
+    box-shadow: black 2px 2px;
+}
+.body{
+    width: inherit;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    margin: 30px 0;
+}
+
+.left_col{
+    height: 450px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+}
+.left_col >div{
+    flex: 1;
+    width: inherit;
+    border: black solid 2px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.card_left{
+    margin-left: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+.card_left > button{
+    width: 70px;
+    box-shadow: black 2px 2px;
+    border: black solid 1px;
+    background-color: #fdd966;
+    padding: 5px 0px;
+}
+.card_right{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.right_col{
+    flex: 1;
+    margin-left: 15px;
+}
+.def_card{
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: black solid 2px;
+}
+.def_card >*{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.def_card>h2{
+    font-size: xx-large;
+}
+h2 > span{
+    font: bolder;
+}
+.def_card > button{
+    width: 200px;
+    height: 30px;
+    margin-top: 30px;
+    box-shadow: black 2px 2px;
+    border: black 1px solid;
+    background-color: #93c47d;
+}

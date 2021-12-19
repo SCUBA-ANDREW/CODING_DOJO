@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top_nav">
+            <h1>Dojonary</h1>
+            <input type="text" name="search_bar" id="search_bar">
+            <button onclick="login_out(this)">Login</button>
+        </div>
+        <div class="body">
+            <div class="left_col">
+                <div class="card">
+                    <div class="card_left">
+                        <h1>ninja</h1>
+                        <h3>noun</h3>
+                        <p>Plural: ninjas</p>
+                        <button onclick="liked_alert()">13 likes</button>
+                    </div>
+                    <div class="card_right">
+                        <h2>A practitioner skilled in the <a href="#">Jananese</a> art of <a href="#">ninjutsu</a></h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card_left">
+                        <h1>ninja</h1>
+                        <h3>noun</h3>
+                        <p>Plural: ninjas</p>
+                        <button onclick="liked_alert()">37 likes</button>
+                    </div>
+                    <div class="card_right">
+                        <h2>A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="right_col">
+                <div class="def_card">
+                    <h2>Dojonary is defined by <span>YOU</span></h2>
+                    <button onclick="hide(this)">Add Definition</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
