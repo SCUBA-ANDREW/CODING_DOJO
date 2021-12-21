@@ -25,6 +25,7 @@ function Accept_TE(Element){
     YC_display.innerText = YC_count;
     rc_display.innerText = Request_count;
     Element.remove();
+    document.getElementById("TE_close").remove();
 }
 
 var PE_list = document.getElementById("PE_ConnectionRequest")
@@ -41,5 +42,6 @@ function Accept_PE(Element){
     YC_display.innerText = YC_count;
     rc_display.innerText = Request_count;
     Element.remove();
+    document.getElementById("PE_close").remove();
 }
 
