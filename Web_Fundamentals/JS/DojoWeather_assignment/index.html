@@ -12,15 +12,15 @@
         <div class="top_bar">
             <h1>DojoWeather</h1>
             <ul>
-                <li>Burbank</li>
-                <li>Chicago</li>
-                <li>Dallas</li>
+                <li onclick="alert_lc()">Burbank</li>
+                <li onclick="alert_lc()">Chicago</li>
+                <li onclick="alert_lc()">Dallas</li>
             </ul>
         </div>
         <div class="mid_bar">
             <h1>San Jose</h1>
             <p>show temperature in </p>
-            <select name="temp_unit" id="temp_unit">
+            <select onchange="unit_change(this)" name="temp_unit" id="temp_unit">
                 <option value="C">&#8451;</option>
                 <option value="F">&#8457;</option>
             </select>
@@ -29,39 +29,47 @@
             <div class="card">
                 <h2>Today</h2>
                 <img src="assets/some_rain.png" alt="some_rain" class="weather_img">
-                <h5>some rain</h5>
+                <h4>some rain</h4>
                 <div class="temp">
-                    <h3 class="red">24&#8451;</h3>
-                    <h3 class="blue">18&#8451;</h3>
+                    <h3 class="red" id="td_h">24&#176;</h3>
+                    <h3 class="blue" id="td_l">18&#176;</h3>
                 </div>
             </div>
             <div class="card">
                 <h2>Tomorrow</h2>
                 <img src="assets/some_sun.png" alt="some_sun" class="weather_img">
-                <h5>some sun</h5>
+                <h4>some sun</h4>
                 <div class="temp">
-                    <h3 class="red">27&#8451;</h3>
-                    <h3 class="blue">19&#8451;</h3>
+                    <h3 class="red" id="tm_h">27&#176;</h3>
+                    <h3 class="blue" id="tm_l">19&#176;</h3>
                 </div>
             </div>
             <div class="card">
                 <h2>Friday</h2>
                 <img class="weather_img" src="assets/some_clouds.png" alt="some_clouds">
-                <h5>some clouds</h5>
+                <h4>some clouds</h4>
                 <div class="temp">
-                    <h3 class="red">21&#8451;</h3>
-                    <h3 class="blue">16&#8451;</h3>
+                    <h3 class="red" id="fr_h">21&#176;</h3>
+                    <h3 class="blue" id="fr_l">16&#176;</h3>
                 </div>
             </div>
             <div class="card">
                 <h2>Saturday</h2>
                 <img src="assets/some_sun.png" alt="some_sun" class="weather_img">
-                <h5>some sun</h5>
+                <h4>some sun</h4>
                 <div class="temp">
-                    <h3 class="red">26&#8451;</h3>
-                    <h3 class="blue">21&#8451;</h3>
+                    <h3 class="red" id="sa_h">26&#176;</h3>
+                    <h3 class="blue" id="sa_l">21&#176;</h3>
                 </div>
             </div>
+        </div>
+        <div class="cookie" id="cookie_dv">
+            <img src="assets/cookie.png" alt="cookie">
+            <div class="cookie_message">
+                <h2>Stop! Cookie time</h2>
+                <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our trafiic. <a href="#">Read more...</a></p>
+            </div>
+            <button onclick="cookie_accept()">I Accept</button>
         </div>
     </div>
 
