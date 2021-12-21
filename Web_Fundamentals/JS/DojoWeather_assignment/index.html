@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div class="top_bar">
+            <h1>DojoWeather</h1>
+            <ul>
+                <li>Burbank</li>
+                <li>Chicago</li>
+                <li>Dallas</li>
+            </ul>
+        </div>
+        <div class="mid_bar">
+            <h1>San Jose</h1>
+            <p>show temperature in </p>
+            <select name="temp_unit" id="temp_unit">
+                <option value="C">&#8451;</option>
+                <option value="F">&#8457;</option>
+            </select>
+        </div>
+        <div class="body">
+            <div class="card">
+                <h2>Today</h2>
+                <img src="assets/some_rain.png" alt="some_rain" class="weather_img">
+                <h5>some rain</h5>
+                <div class="temp">
+                    <h3 class="red">24&#8451;</h3>
+                    <h3 class="blue">18&#8451;</h3>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Tomorrow</h2>
+                <img src="assets/some_sun.png" alt="some_sun" class="weather_img">
+                <h5>some sun</h5>
+                <div class="temp">
+                    <h3 class="red">27&#8451;</h3>
+                    <h3 class="blue">19&#8451;</h3>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Friday</h2>
+                <img class="weather_img" src="assets/some_clouds.png" alt="some_clouds">
+                <h5>some clouds</h5>
+                <div class="temp">
+                    <h3 class="red">21&#8451;</h3>
+                    <h3 class="blue">16&#8451;</h3>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Saturday</h2>
+                <img src="assets/some_sun.png" alt="some_sun" class="weather_img">
+                <h5>some sun</h5>
+                <div class="temp">
+                    <h3 class="red">26&#8451;</h3>
+                    <h3 class="blue">21&#8451;</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -59,5 +59,12 @@ for(var i=0; i<pokémon.length; i++) {
         console.log(reverse_name(pokémon[i].name));
     }
 }
-
+// method2
+function reverseString(string){
+    var revString="";
+    for(var i=string.length-1; i>=0; i--){
+        revString+=string[i];
+    }
+    return revString;
+}
 
