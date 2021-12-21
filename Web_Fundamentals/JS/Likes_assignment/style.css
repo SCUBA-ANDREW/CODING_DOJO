@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container{
+    margin:10px auto;
+    width:520px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top_row{
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.top_row >h1{
+    color: white;
+    margin-left: 10px;
+}
+#container > h1{
+    margin: 10px 0;
+}
+.body{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.left_col{
+    flex: 1;
+}
+.profile_card{
+    border: black solid 3px;
+    height: 200px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile_card >img{
+    width:75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.profile_card>a{
+    margin-bottom: 10px;
+}
+.right_col{
+    flex: 2;
+}
+.feed{
+    height: 120px;
+    border: black solid 3px;
+    margin-bottom: 20px;
+}
+.feed >*{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.feed_overview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.feed_overview > h2{
+    flex: 1;
+}
+.like_section{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.like_section >button{
+    width: 45px;
+    border: black solid 2px;
+    box-shadow: black 2px 2px;
+    background-color: #fdd966;
+}
+.feed >p{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    margin-right: 60px;
+}
