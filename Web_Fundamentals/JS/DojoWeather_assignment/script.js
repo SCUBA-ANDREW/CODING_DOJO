@@ -5,10 +5,10 @@ var cookie_div = document.getElementById("cookie_dv");
 function cookie_accept(){
     cookie_div.remove();
 }
-var today_hc = 24
-var today_hf = Math.round(today_hc*9/5)+32
-var today_lc = 18
-var today_lf = Math.round(today_lc*9/5)+32
+var tdy_hc = 24
+var tdy_hf = Math.round(tdy_hc*9/5)+32
+var tdy_lc = 18
+var tdy_lf = Math.round(tdy_lc*9/5)+32
 var tmrw_hc = 27
 var tmrw_hf = Math.round(tmrw_hc*9/5)+32
 var tmrw_lc = 19
@@ -24,8 +24,8 @@ var sat_lf = Math.round(sat_lc*9/5)+32
 
 function unit_change(element){
     if(element.value === "C"){
-        document.getElementById("td_h").innerText = today_hc+ '\xB0'
-        document.getElementById("td_l").innerText = today_lc+ '\xB0'
+        document.getElementById("td_h").innerText = tdy_hc+ '\xB0'
+        document.getElementById("td_l").innerText = tdy_lc+ '\xB0'
         document.getElementById("tm_h").innerText = tmrw_hc+ '\xB0'
         document.getElementById("tm_l").innerText = tmrw_lc+ '\xB0'
         document.getElementById("fr_h").innerText = fri_hc+ '\xB0'
@@ -34,8 +34,8 @@ function unit_change(element){
         document.getElementById("sa_l").innerText = sat_lc+ '\xB0'
     }
     else if(element.value === "F"){
-        document.getElementById("td_h").innerText = today_hf+ '\xB0';
-        document.getElementById("td_l").innerText = today_lf+ '\xB0'
+        document.getElementById("td_h").innerText = tdy_hf+ '\xB0';
+        document.getElementById("td_l").innerText = tdy_lf+ '\xB0'
         document.getElementById("tm_h").innerText = tmrw_hf+ '\xB0'
         document.getElementById("tm_l").innerText = tmrw_lf+ '\xB0'
         document.getElementById("fr_h").innerText = fri_hf+ '\xB0'
