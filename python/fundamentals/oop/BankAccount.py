@@ -1,9 +1,9 @@
-
 class BankAccount:
+    all_acc=[]
     def __init__(self, int_rate, balance): 
         self.balance = balance
         self.int_rate=int_rate
-
+        BankAccount.all_acc.append(self)
     def deposit(self, amount):
         self.balance+=amount
         return self
@@ -37,3 +37,6 @@ second_acc = BankAccount(0.5,900)
 first_acc.deposit(300).deposit(100).deposit(200).withdraw(500).yield_interest().display_account_info()
 # To the second account, make 2 deposits and 4 withdrawals, then yield interest and display the account's info all in one line of code (i.e. chaining)
 second_acc.deposit(250).deposit(300).withdraw(50).withdraw(50).withdraw(50).withdraw(50).yield_interest().display_account_info()
+# NINJA BONUS: use a classmethod to print all instances of a Bank Account's info
+for i in range(0,len(BankAccount.all_acc)):
+    BankAccount.all_acc[i].display_account_info()
