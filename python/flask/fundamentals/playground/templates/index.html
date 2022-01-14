@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+</head>
+<style>
+    h1{
+        margin:auto 0;
+    }
+    div{
+        margin: auto 30px;
+        height: 60px;
+        width: 60px;
+        border:black solid 1px;
+        {% if color %}
+        background-color: {{color}};
+        {% endif %}
+    }
+</style>
+<body>
+    
+    <h1>Welcome!</h1>
+    {%for idx in range(0,times):%}
+        <div></div>
+    {%endfor%}
+</body>
+</html>
