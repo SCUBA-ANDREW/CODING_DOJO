@@ -13,14 +13,25 @@
         {%for idxh in range(num_height)%}
         <tr>
             {% for idx in range(num_wide)%}
+            {% if idx*idxh%2==1 and idx!=0 and idxh!=0%}
             <td id="color1" style="background-color: {{color1}};"></td>
+            {%elif idx*idxh%2==0 and idx!=0 and idxh!=0 and idxh%2==1%}
             <td id="color2" style="background-color: {{color2}};"></td>
-            {%endfor%}
-        </tr>
-        <tr>
-            {% for idx in range(num_wide)%}
-            <td id="color2" style="background-color: {{color2}};"></td>
+            {%elif idx*idxh%2==1 and idx!=0 and idxh!=0 and idxh%2==1%}
             <td id="color1" style="background-color: {{color1}};"></td>
+            {%elif idx==0 and idxh%2==0%}
+            <td id="color1" style="background-color: {{color1}};"></td>
+            {%elif idx==0 and idxh%2==1%}
+            <td id="color2" style="background-color: {{color2}};"></td>
+            {%elif idxh==0 and idx%2==0%}
+            <td id="color1" style="background-color: {{color1}};"></td>
+            {%elif idxh==0 and idx%2==1%}
+            <td id="color2" style="background-color: {{color2}};"></td>
+            {%elif idxh%2==0 and idx%2==1%}
+            <td id="color2" style="background-color: {{color2}};"></td>
+            {%elif idxh%2==0 and idx%2==0%}
+            <td id="color1" style="background-color: {{color1}};"></td>
+            {%endif%}
             {%endfor%}
         </tr>
         {%endfor%}

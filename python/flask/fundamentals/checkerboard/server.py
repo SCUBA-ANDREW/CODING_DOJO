@@ -18,15 +18,15 @@ def checkerboard(num_height=None,num_wide=None,color1=None,color2=None):
                 num_wide=8
                 if num_height==None:
                     num_height=8
-                    return render_template('index.html',num_height=int(num_height/2),num_wide=int(num_wide/2),color1=color1,color2=color2)
+                    return render_template('index.html',num_height=int(num_height),num_wide=int(num_wide),color1=color1,color2=color2)
                 else:
-                    return render_template('index.html',num_height=int(num_height/2),num_wide=int(num_wide/2),color1=color1,color2=color2)
+                    return render_template('index.html',num_height=int(num_height),num_wide=int(num_wide),color1=color1,color2=color2)
             else:
-                return render_template('index.html',num_height=int(num_height/2),num_wide=int(num_wide/2),color1=color1,color2=color2)
+                return render_template('index.html',num_height=int(num_height),num_wide=int(num_wide),color1=color1,color2=color2)
         else:
-            return render_template('index.html',num_height=int(num_height/2),num_wide=int(num_wide/2),color1=color1,color2=color2)
+            return render_template('index.html',num_height=int(num_height),num_wide=int(num_wide),color1=color1,color2=color2)
     else:
-        return render_template('index.html',num_height=int(num_height/2),num_wide=int(num_wide/2),color1=color1,color2=color2)
+        return render_template('index.html',num_height=int(num_height),num_wide=int(num_wide),color1=color1,color2=color2)
 
 
 
