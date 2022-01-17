@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+</head>
+<body>
+    <p>Submitted Info</p>
+    <table>
+        <tr>
+            <th>Name: </th>
+            <td>{{session['form']['name']}}</td>
+        </tr>
+        <tr>
+            <th>Dojo Location: </th>
+            <td>{{session['form']['location']}}</td>
+        </tr>
+        <tr>
+            <th>Favorite Language: </th>
+            <td>{{session['form']['language']}}</td>
+        </tr>
+        <tr>
+            <th>Comment: </th>
+            <td>{{session['form']['comments']}}</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
