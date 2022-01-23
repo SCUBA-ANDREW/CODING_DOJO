@@ -12,7 +12,9 @@ const expected2 = "olleh dlrow";
 
 const str3 = "abc def ghi";
 const expected3 = "cba fed ihg";
-
+// temp = ["hello","world"]
+// temp[0]="hello"
+// tempword="0lleh"
 /**
  * Reverses the letters in each words in the given space separated
  * string of words. Does NOT reverse the order of the words themselves.
@@ -21,7 +23,27 @@ const expected3 = "cba fed ihg";
  * @param {string} str Contains space separated words.
  * @returns {string} The given string with each word's letters reversed.
  */
-function reverseWords(str) {}
+
+// create a function takes in a string
+function reverseWords(str) {
+    // create a string variable for final outcome
+    var fin_outcome= ""
+    // utilizing split built-in function to separate the string based on " "(i.e. space)
+    var temp= str.split(" ")
+    // go through each of the string blocks and reverse them
+    for(var i=0;i<temp.length;i++){
+        var tempword=""
+        for(var j=temp[i].length-1;j>=0;j--){
+            tempword+=temp[i][j]
+        }
+        temp[i]=tempword
+    }
+    // put the array back to the string
+    fin_outcome=temp.join(" ")
+    // return string
+    return fin_outcome
+}
+// console.log(reverseWords(str3))
 
 // *****************************************************
 
@@ -43,8 +65,20 @@ const two_expected1 = "test a is This";
  * @returns {string} The given string with the word order reversed but the words
  *    themselves are not reversed.
  */
-function reverseWordOrder(wordsStr) {}
-
+// create a function to feed in a string
+function reverseWordOrder(wordsStr) {
+    // create a string variable for final outcome
+    var f_outcome = ""
+    // split the word based on spaces " "
+    var temp_arr=wordsStr.split(" ")
+    // take array from split and go through it from backwards(reverse it)
+    temp_arr = temp_arr.reverse()
+    // feed it back to the final outcome variable
+    f_outcome=temp_arr.join(" ")
+    // return final outcome
+    return f_outcome
+}
+// console.log(reverseWordOrder(two_str1))
 // ********************************************************
 
 /* 
@@ -70,4 +104,22 @@ const three_expected3 = "heol ";
  * @param {string} str A string that may contain duplicates.
  * @returns {string} The given string with any duplicate characters removed.
  */
-function stringDedupe(str) {}
+
+// create a function feeds in a string
+function stringDedupe(str) {
+    // create a string variable for final outcome
+    var outcome=""
+    // create a temp empty array
+    var temp_array=[]
+    // iterate through the string, if it is not yet included in the array, add it into the array,
+    for(var i=0;i<str.length;i++){
+        if(temp_array.indexOf(str[i])<0){
+            temp_array.push(str[i])
+        }
+    }
+    // return the array into final outcome string, and then return that
+    outcome = temp_array.join("")
+    return outcome
+
+}
+// console.log(stringDedupe(three_str3))
