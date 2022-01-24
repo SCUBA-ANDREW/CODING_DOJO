@@ -1,6 +1,6 @@
 from flask_app.config.mysqlconnection import connectToMySQL
 # model the class after the friend table from our database
-DATABASE = 'jan_user_db'
+DATABASE = 'users_schema'
 class User:
     def __init__( self , data ):
         self.id = data['id']
@@ -9,11 +9,12 @@ class User:
         self.email = data['email']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+    @property
     def fullname(self):
         return f'{self.first_name.capitalize()} {self.last_name.capitalize()}'
     #C
     @classmethod #query, call the database, return
-    def creatre(cls,data:dict) -> int:
+    def create(cls,data:dict) -> int:
         query = 'INSERT INTO users (first_name, last_name, email) VALUES (%(first_name)s, %(last_name)s, %(email)s);'
         return connectToMySQL(DATABASE).query_db(query, data)
 
@@ -21,7 +22,7 @@ class User:
     @classmethod
     def get_all(cls):
         query = 'SELECT * FROM users;'
-        results = connectToMySQL('DATABASE').query_db(query)
+        results = connectToMySQL(DATABASE).query_db(query)
         if results:
             all_users = []
             for user in results:

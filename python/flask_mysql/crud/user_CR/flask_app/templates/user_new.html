@@ -9,27 +9,25 @@
 </head>
 <body>
     <div class='container'>
-        <div>
-            <h1 class='text-center'> User List</h1>
+        <div class='row-2'>
+            <h1>Add a new user</h1>
+            <a href='/' class='btn btn-secondary'>Home</a>
         </div>
-        
-        <h1>Edit {{ user.fullname }}</h1>
-        <a href='/' class='btn btn-secondary'>Home</a>
 
-        <form action='/user/{{user.id}}/update' method='post'>
+        <form action='/user/create' method='post'>
             <div class='mb-3'>
                 <label for='first_name'>First Name</label>
-                <input type='text' class='form-control' name='first_name' id='first_name' value='{{user.first_name}}'>
+                <input type='text' class='form-control' name='first_name' id='first_name' >
             </div>
             <div class='mb-3'>
                 <label for='last_name'>Last Name</label>
-                <input type='text' class='form-control' name='last_name' id='last_name' value='{{user.last_name}}'>
+                <input type='text' class='form-control' name='last_name' id='last_name' >
             </div>
             <div class='mb-3'>
                 <label for='email'>Email</label>
-                <input type='text' class='form-control' name='email' id='email' value='{{user.email}}'>
+                <input type='text' class='form-control' name='email' id='email'>
             </div>
-            <button class='btn btn-success'>Update User</button>
+            <button class='btn btn-success'>Create</button>
         </form>
     </div>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd' crossorigin='anonymous'></script>
