@@ -4,11 +4,12 @@ from flask_app import app
 from flask_app.models import model_ninja,model_dojo
 @app.route('/ninja/new')
 def ninja_new():
-    all_ninjas = model_ninja.Ninja.get_all()
-    return render_template('ninja_new.html')
+    all_dojos = model_dojo.Dojo.get_all()
+    return render_template('ninja_new.html', all_dojos=all_dojos)
 
 @app.route('/ninja/create', methods=['post'])
 def ninja_create():
+    print(request.form)
     model_ninja.Ninja.create(request.form)
     return redirect('/')
 
@@ -19,7 +20,7 @@ def ninja_show(id):
 
 @app.route('/ninja/<int:id>/edit')
 def ninja_edit(id):
-    ninja = model_ninja.Ninja.ger_one({'id':id})
+    ninja = model_ninja.Ninja.get_one({'id':id})
     return render_template('ninja_edit.html', ninja=ninja)
 
 @app.route('/ninja/<int:id>/update',methods=['post'])

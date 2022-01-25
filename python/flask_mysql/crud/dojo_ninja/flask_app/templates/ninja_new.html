@@ -17,9 +17,9 @@
         <form action='/ninja/create' method='post'>
             <div class='mb-3'>
                 <label for='dojo'>Dojo</label>
-                <select name="dojo" id="dojo">
-                    {%for dojos%}
-                        <option value="{{dojo_name}}"></option>
+                <select name="dojo_id" id="dojo_id">
+                    {%for dojo in all_dojos%}
+                        <option value="{{dojo.id}}">{{dojo.name}}</option>
                     {%endfor%}
                 </select>
                 

@@ -1,5 +1,4 @@
 from flask_app.config.mysqlconnection import connectToMySQL
-from flask_app import DATABASE
 from flask_app.models import model_ninja
 # model the class after the friend table from our database
 DATABASE = 'dojos_and_ninjas_schema'
@@ -11,7 +10,7 @@ class Dojo:
         self.updated_at = data['updated_at']
     #C
     @classmethod #query, call the database, return
-    def creatre(cls,data:dict) -> int:
+    def create(cls,data:dict) -> int:
         query = 'INSERT INTO dojos (name) VALUES (%(name)s);'
         return connectToMySQL(DATABASE).query_db(query, data)
 
@@ -19,7 +18,7 @@ class Dojo:
     @classmethod
     def get_all(cls):
         query = 'SELECT * FROM dojos;'
-        results = connectToMySQL('DATABASE').query_db(query)
+        results = connectToMySQL(DATABASE).query_db(query)
         if results:
             all_dojos = []
             for dojo in results:
@@ -58,7 +57,7 @@ class Dojo:
                 }
                 ninja=model_ninja.Ninja(data)
                 dojo.ninjas.append(ninja)
-            return cls(results[0])
+            return dojo
         return []
 
     #U

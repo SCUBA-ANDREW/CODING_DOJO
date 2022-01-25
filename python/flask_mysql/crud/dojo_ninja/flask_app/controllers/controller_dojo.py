@@ -1,30 +1,31 @@
 from flask import render_template, redirect, request, session
-from flask.app import app
+from flask_app import app
 from flask_app.models import model_dojo,model_ninja
 # *****below will change*****
-@app.route('/')
-def index():
+@app.route('/dojo')
+def dojo_main():
     all_dojos = model_dojo.Dojo.get_all()
-    return render_template('index.html')
+    return render_template('dojo_new.html', all_dojos=all_dojos)
 
-@app.route('/dojo/new')
-def dojo_new():
-    all_dojos = model_dojo.Dojo.get_all()
-    return render_template('dojo_new.html')
+# @app.route('/dojo/new')
+# def dojo_new():
+#     all_dojos = model_dojo.Dojo.get_all()
+#     return render_template('dojo_new.html')
 
 @app.route('/dojo/create', methods=['post'])
 def dojo_create():
     model_dojo.Dojo.create(request.form)
-    return redirect('/')
+    return redirect('/dojo')
 
 @app.route('/dojo/<int:id>')
 def dojo_show(id):
-    dojo=model_dojo.Dojo.get_one({'id':id})
+    dojo=model_dojo.Dojo.get_one_with_ninja({'id':id})
+    print(dojo)
     return render_template('dojo_show.html',dojo =dojo)
 
 @app.route('/dojo/<int:id>/edit')
 def dojo_edit(id):
-    dojo = model_dojo.Dojo.ger_one({'id':id})
+    dojo = model_dojo.Dojo.get_one({'id':id})
     return render_template('dojo_edit.html', dojo=dojo)
 
 @app.route('/dojo/<int:id>/update',methods=['post'])

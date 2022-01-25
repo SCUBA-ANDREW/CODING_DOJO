@@ -6,4 +6,4 @@ from flask_app.models.model_dojo import Dojo
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return redirect('/dojo')
