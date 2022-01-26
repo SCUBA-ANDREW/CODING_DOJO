@@ -9,126 +9,141 @@
 </head>
 <body>
     <div class='container'>
-        <div class='row-2'>
-            <h1>Add a new user</h1>
-        </div>
+        <div class="row d-flex align-items-center">
 
-        <form action='/user/create' method='post'>
-            <div class='mb-3'>
-                <label for='first_name'>First Name</label>
-                <input type='text' class='form-control' name='first_name' id='first_name'>
-                {% with errors = get_flashed_messages(category_filter=["err_reg_first"]) %}
-                    {% if errors %}
+            <div class="col-xs-6">
+                <div class='row-2'>
+                    <h1>Add a new user</h1>
+                </div>
+                
+                <form action='/user/create' method='post'>
+                    <div class='mb-3'>
+                        <label for='first_name'>First Name</label>
+                        <input type='text' class='form-control' name='first_name' id='first_name'>
+                        {% with errors = get_flashed_messages(category_filter=["err_reg_first"]) %}
+                        {% if errors %}
                         <div class="alert-message block-message error">
                             <a class="close" href="#">×</a>
                             <ul>
-                            {%- for msg in errors %}
+                                {%- for msg in errors %}
                                 <li>{{ msg }}</li>
-                            {% endfor -%}
+                                {% endfor -%}
                             </ul>
                         </div>
-                    {% endif %}
-                {% endwith %}
-            </div>
-            <div class='mb-3'>
-                <label for='last_name'>Last Name</label>
-                <input type='text' class='form-control' name='last_name' id='last_name' >
-                {% with errors = get_flashed_messages(category_filter=["err_reg_last"]) %}
-                    {% if errors %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class='mb-3'>
+                        <label for='last_name'>Last Name</label>
+                        <input type='text' class='form-control' name='last_name' id='last_name' >
+                        {% with errors = get_flashed_messages(category_filter=["err_reg_last"]) %}
+                        {% if errors %}
                         <div class="alert-message block-message error">
                             <a class="close" href="#">×</a>
                             <ul>
-                            {%- for msg in errors %}
+                                {%- for msg in errors %}
                                 <li>{{ msg }}</li>
-                            {% endfor -%}
+                                {% endfor -%}
                             </ul>
                         </div>
-                    {% endif %}
-                {% endwith %}
-            </div>
-            <div class='mb-3'>
-                <label for='email'>Email</label>
-                <input type='text' class='form-control' name='email' id='email' >
-                {% with errors = get_flashed_messages(category_filter=["err_reg_em"]) %}
-                    {% if errors %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class='mb-3'>
+                        <label for='email'>Email</label>
+                        <input type='text' class='form-control' name='email' id='email' >
+                        {% with errors = get_flashed_messages(category_filter=["err_reg_em"]) %}
+                        {% if errors %}
                         <div class="alert-message block-message error">
                             <a class="close" href="#">×</a>
                             <ul>
-                            {%- for msg in errors %}
+                                {%- for msg in errors %}
                                 <li>{{ msg }}</li>
-                            {% endfor -%}
+                                {% endfor -%}
                             </ul>
                         </div>
-                    {% endif %}
-                {% endwith %}
-            </div>
-            <div class='mb-3'>
-                <label for='password'>Password</label>
-                <input type='text' class='form-control' name='pw' id='password' >
-                {% with errors = get_flashed_messages(category_filter=["err_reg_pw"]) %}
-                    {% if errors %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class='mb-3'>
+                        <label for='password'>Password</label>
+                        <input type='text' class='form-control' name='pw' id='password' >
+                        {% with errors = get_flashed_messages(category_filter=["err_reg_pw"]) %}
+                        {% if errors %}
                         <div class="alert-message block-message error">
                             <a class="close" href="#">×</a>
                             <ul>
-                            {%- for msg in errors %}
+                                {%- for msg in errors %}
                                 <li>{{ msg }}</li>
-                            {% endfor -%}
+                                {% endfor -%}
                             </ul>
                         </div>
-                    {% endif %}
-                {% endwith %}
-            </div>
-            <div class='mb-3'>
-                <label for='confirm_password'>Confirm Password</label>
-                <input type='text' class='form-control' name='confirm_pw' id='confirm_password' >
-                {% with errors = get_flashed_messages(category_filter=["err_reg_cpw"]) %}
-                    {% if errors %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <div class='mb-3'>
+                        <label for='confirm_password'>Confirm Password</label>
+                        <input type='text' class='form-control' name='confirm_pw' id='confirm_password' >
+                        {% with errors = get_flashed_messages(category_filter=["err_reg_cpw"]) %}
+                        {% if errors %}
                         <div class="alert-message block-message error">
                             <a class="close" href="#">×</a>
                             <ul>
-                            {%- for msg in errors %}
+                                {%- for msg in errors %}
                                 <li>{{ msg }}</li>
-                            {% endfor -%}
+                                {% endfor -%}
                             </ul>
                         </div>
-                    {% endif %}
-                {% endwith %}
+                        {% endif %}
+                        {% endwith %}
+                    </div>
+                    <button class='btn btn-success'>Add User</button>
+                </form>
+                
             </div>
-            <button class='btn btn-success'>Add User</button>
-        </form>
-
-        <div class='row-2'>
-            <h1>Login</h1>
-        </div>
-
-        <form action='/user/login' method='post'>
+                
             
-            {% with errors = get_flashed_messages(category_filter=["err_login"]) %}
-            {% if errors %}
-            <div class="alert-message block-message error">
-                <a class="close" href="#">×</a>
-                <ul>
-                {%- for msg in errors %}
-                    <li>{{ msg }}</li>
-                {% endfor -%}
-                </ul>
+            
+            <div class="col-xs-6">
+                <div class='row-2'>
+                    <h1>Login</h1>
+                </div>
+                
+                <form action='/user/login' method='post'>
+                    
+                    {% with errors = get_flashed_messages(category_filter=["err_login"]) %}
+                    {% if errors %}
+                    <div class="alert-message block-message error">
+                        <a class="close" href="#">×</a>
+                        <ul>
+                            {%- for msg in errors %}
+                            <li>{{ msg }}</li>
+                            {% endfor -%}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+                    <div class='mb-3'>
+                        <label for='email'>Email</label>
+                        <input type='text' class='form-control' name='email' id='email' >
+                    </div>
+                    <div class='mb-3'>
+                        <label for='password'>Password</label>
+                        <input type='text' class='form-control' name='pw' id='password' >
+                    </div>
+                    <button class='btn btn-success'>Login</button>
+                </form>
+                
+                
             </div>
-            {% endif %}
-            {% endwith %}
-            <div class='mb-3'>
-                <label for='email'>Email</label>
-                <input type='text' class='form-control' name='email' id='email' >
-            </div>
-            <div class='mb-3'>
-                <label for='password'>Password</label>
-                <input type='text' class='form-control' name='pw' id='password' >
-            </div>
-            <button class='btn btn-success'>Login</button>
-        </form>
-
-
-
-
+            
+            
+            
+            
+            
+            
+        </div>
+            
     </div>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd' crossorigin='anonymous'></script>
 </body>
