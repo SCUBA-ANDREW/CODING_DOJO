@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
+    <title>Recipes</title>
+</head>
+<body>
+    <div class='container'>
+        <div class="row d-flex align-items-center">
+
+            <!-- <div class="col-xs-6"> -->
+                <div class='row-2'>
+                    <h1>Edit Recipe</h1>
+                    <a href="/success">Dashboard</a>
+                    <a href="/logout">Logout</a>
+                </div>
+                
+                <form action='/recipe/create' method='post'>
+                    <div class='mb-3'>
+                        <label for='name'>name</label>
+                        <input type='text' class='form-control' name='name' id='name' value="{{recipe.name}}">
+                    </div>
+                    <div class='mb-3'>
+                        <label for='description'>Description</label>
+                        <textarea class="form-control" name="description" id="description" cols="30" rows="10" >{{recipe.description}}</textarea>
+                    </div>
+                    <div class='mb-3'>
+                        <label for='instructions'>Instructions</label>
+                        <textarea class="form-control" name="instructions" id="instructions" cols="30" rows="10" >{{recipe.instructions}}</textarea>
+                    </div>
+                    <div class='mb-3'>
+                        <label for='data_made'>Date Made On:</label>
+                        <input type="date" name="data_made" id="data_made" value="{{recipe.data_made}}">
+                    </div>
+                    <div class='mb-3 input-group'>
+                        <p>Under 30 mins?</p>
+                        {%if recipe.under_thrty_min=="Yes"%}
+                            <input type="radio" name="under_thrty_min" id="yes" value="Yes" checked>
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="under_thrty_min" id="no" value="No">
+                            <label for="no">No</label>
+                        {%else %}
+                            <input type="radio" name="under_thrty_min" id="yes" value="Yes">
+                            <label for="yes">Yes</label>
+                            <input type="radio" name="under_thrty_min" id="no" value="No" checked>
+                            <label for="no">No</label>
+                        {%endif%}
+                    </div>
+                    <button class='btn btn-success'>Create</button>
+                </form>
+                
+                
+            <!-- </div> -->
+            
+        </div>
+            
+    </div>
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd' crossorigin='anonymous'></script>
+</body>
+</html>

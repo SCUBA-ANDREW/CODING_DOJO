@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
+
+    <title>Recipes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text_center">Welcome {{session['first_name']}}!</h1>
+            <a href="/recipe/new">Create</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <h2>These are the recipes</h2>
+
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Under 30 minutes?</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for key in recipe%}
+                    <tr>
+                        <td>{{key.name}}</td>
+                        <td>{{key.under_thrty_min}}</td>
+                        <td>
+                            <a href="/recipe/{{key.id}}">view instructions</a>
+                            {%if session['uuid']==key.user_id%}
+                                <a href="/recipe/edit/{{key.id}}">edit</a>
+                                <a href="/recipe/delete/{{key.id}}">delete</a>
+                            {%endif%}
+                        </td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>

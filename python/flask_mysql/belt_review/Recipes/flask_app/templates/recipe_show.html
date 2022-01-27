@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous'>
+    <title>Recipes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text_center">Welcome {{session['first_name']}}!</h1>
+            <a href="/success">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <h2>{{recipe.name}}</h2>
+        <div class="border border-primary">
+            <table class="table table-bordered">
+                <tr>
+                    <td scope="row">Descrition:</td>
+                    <td>{{recipe.description}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Under 30 minutes:</td>
+                    <td>{{recipe.under_thrty_min}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Instructions:</td>
+                    <td>{{recipe.instructions}}</td>
+                </tr>
+                <tr>
+                    <td scope="row">Date Made:</td>
+                    <td>{{recipe.data_made}}</td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+</body>
+</html>
