@@ -1,20 +1,20 @@
 from builtins import print
-from flask import render_template, redirect, request, session
+from flask import render_template, redirect, request, session,flash,url_for,Flask
 
 from flask_app import app,bcrypt
-from flask_app.models import model_user
+from flask_app.models import model_user, model_story
 
 
 # login page
 @app.route('/')
-@app.route('/user/new')
 def user_new():
-    if 'uuid' in session:
-        return redirect('/success')
     return render_template('index.html')
 
 @app.route('/login')
+@app.route('/user/new')
 def login():
+    if 'uuid' in session:
+        return redirect('/success')
     return render_template('login.html')
 
 @app.route('/comingsoon')
@@ -36,18 +36,20 @@ def user_login():
         # session['uuid']=model_user.User.get_one_by_email(request.form).id
         return redirect('/success')
     else:
-        return redirect('/')
+        return redirect('/success')
         
 # dashboard
 @app.route('/success')
 def success():
     if 'uuid' not in session:
-        return redirect('/')
-    # show=model_show.Show.get_all()
-    check_like=model_like.Like.check_like({'user_id':session['uuid']})
-    print(check_like)
-    # user=model_user.User.get_one_with_show({'id':id})
-    # return render_template('dashboard.html',show=show,check_like=check_like)
+        return redirect('/login')
+    story=model_story.Story.get_all()
+    # check_like=model_like.Like.check_like({'user_id':session['uuid']})
+    # print(check_like)
+    # user=model_user.User.get_one_with_story({'id':id})
+    return render_template('user_page.html',story=story)
+
+
 
 # logout
 @app.route('/logout')
@@ -61,7 +63,7 @@ def logout():
 def user_create():
     # validation
     if not model_user.User.validate_reg(request.form):
-        return redirect('/')
+        return redirect('/login')
 
     #create the hash password
     hash_pw=bcrypt.generate_password_hash(request.form['pw'])
@@ -102,3 +104,7 @@ def user_update(id):
 def user_delete(id):
     model_user.User.delete_one({'id':id})
     return redirect('/')
+
+
+
+

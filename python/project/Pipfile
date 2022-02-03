@@ -10,6 +10,7 @@ flask-bcrypt = "*"
 python-dotenv = "*"
 requests = "*"
 cloudinary = "*"
+werkzeug = "*"
 
 [dev-packages]
 

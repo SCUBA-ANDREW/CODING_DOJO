@@ -11,9 +11,14 @@
     <div class="container">
         <div class="navbar nav justify-content-end">
             <a class="nav-item nav-link active" href="/">Home</a>
-            <a class="nav-item nav-link" href="/comingsoon">Fishers</a>
+            <a class="nav-item nav-link" href="/comingsoon">Fishes</a>
             <a class="nav-item nav-link" href="/comingsoon">Sites</a>
+            {%if 'uuid' not in session%}
             <a class="nav-item nav-link" href="/login">Login</a>
+            {%else%}
+            <a class="nav-item nav-link" href="/success">My Page</a>
+            <a class="nav-item nav-link" href="/logout">Logout</a>
+            {%endif%}
         </div>
         <div class="card">
             <div class="row">
