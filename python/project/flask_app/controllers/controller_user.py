@@ -2,7 +2,7 @@ from builtins import print
 from flask import render_template, redirect, request, session
 
 from flask_app import app,bcrypt
-from flask_app.models import model_user,model_show,model_like
+from flask_app.models import model_user
 
 
 # login page
@@ -11,9 +11,17 @@ from flask_app.models import model_user,model_show,model_like
 def user_new():
     if 'uuid' in session:
         return redirect('/success')
+    return render_template('index.html')
+
+@app.route('/login')
+def login():
     return render_template('login.html')
 
-@app.route('/user/login',methods=['post'])
+@app.route('/comingsoon')
+def comingsoon():
+    return render_template('comingsoon.html')
+
+@app.route('/user/signin',methods=['post'])
 def user_login():
     # validations
     is_valid = model_user.User.validate_login(request.form)
@@ -35,11 +43,11 @@ def user_login():
 def success():
     if 'uuid' not in session:
         return redirect('/')
-    show=model_show.Show.get_all()
+    # show=model_show.Show.get_all()
     check_like=model_like.Like.check_like({'user_id':session['uuid']})
     print(check_like)
     # user=model_user.User.get_one_with_show({'id':id})
-    return render_template('dashboard.html',show=show,check_like=check_like)
+    # return render_template('dashboard.html',show=show,check_like=check_like)
 
 # logout
 @app.route('/logout')
