@@ -8,7 +8,8 @@ from flask_app.models import model_user, model_story
 # login page
 @app.route('/')
 def user_new():
-    return render_template('index.html')
+    story=model_story.Story.get_all()
+    return render_template('index.html',story=story)
 
 @app.route('/login')
 @app.route('/user/new')
@@ -43,7 +44,10 @@ def user_login():
 def success():
     if 'uuid' not in session:
         return redirect('/login')
-    story=model_story.Story.get_all()
+    
+    story=model_story.Story.get_all_by_id({'user_id':session['uuid']})
+    print(story)
+    print('test')
     # check_like=model_like.Like.check_like({'user_id':session['uuid']})
     # print(check_like)
     # user=model_user.User.get_one_with_story({'id':id})

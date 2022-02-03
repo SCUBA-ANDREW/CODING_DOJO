@@ -34,6 +34,17 @@ class Story:
                 all_stories.append( cls(story) )
             return all_stories
         return []
+    
+    @classmethod
+    def get_all_by_id(cls, data:dict)->list:
+        query = 'SELECT * FROM stories WHERE user_id = %(user_id)s;'
+        results = connectToMySQL(DATABASE).query_db(query,data)
+        if results:
+            all_stories = []
+            for story in results:
+                all_stories.append( cls(story) )
+            return all_stories
+        return []
 
     @classmethod
     def get_one(cls , data:dict)->list:

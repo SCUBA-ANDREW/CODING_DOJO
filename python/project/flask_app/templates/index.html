@@ -20,16 +20,21 @@
             <a class="nav-item nav-link" href="/logout">Logout</a>
             {%endif%}
         </div>
+        {%for key in story%}
         <div class="card">
             <div class="row">
-                <img src="{{ url_for('static', filename='img/test.jpeg') }}" alt="dive_pic" class="col" style="width: 400px;">
-                <div class="p-2 text-center col ">dive story</div>
-                <div class="d-flex flex-column col justify-content-between align-items-end m-3">
-                    <a href="/comingsoon">posted by /link to creator/</a>
-                    <a href="/comingsoon">more...</a>
+                <img src="https://res.cloudinary.com/dmwbjvfaq/image/upload/c_fill,h_400,w_400/{{key.pic}}" alt="dive_pic" class="col" style="width: 400px;">
+                <div class="p-2 text-center col ">{{key.comment}}</div>
+                <div class="d-flex flex-row col justify-content-end align-items-end m-3">
+                    <a href="/story/{{key.id}}" class="btn">more...</a>
+                    {%if key.user_id ==session['uuid']%}
+                    <a href="/story/edit/{{story.id}}" class="btn btn-secondary">edit</a>
+                    <a href="/story/delete/{{story.id}}"class='btn btn-secondary'>delete</a>
+                    {%endif%}
                 </div>
             </div>
         </div>
+        {%endfor%}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
