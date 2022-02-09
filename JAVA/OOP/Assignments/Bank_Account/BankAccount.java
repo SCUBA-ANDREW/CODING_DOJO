@@ -6,6 +6,12 @@ public class BankAccount {
     private double CheckingBalance;
     private double SavingsBalance;
 
+    private static int countAccounts;
+    private static double totalMoney;
+    public BankAccount(){
+        countAccounts++;
+    }
+
     public double getCheckingBalance(){
         return this.CheckingBalance;
     }
@@ -18,7 +24,7 @@ public class BankAccount {
     public void setSavingsBalance(double SavingsBalance){
         this.SavingsBalance=SavingsBalance;
     }
-    public void deposite(String account,double amnt){
+    public void deposit(String account,double amnt){
         if(account=="Checking"){
             this.setCheckingBalance(this.getCheckingBalance()+amnt);
         }
@@ -37,6 +43,6 @@ public class BankAccount {
 
     public void displayTotal(){
         double sum = this.getCheckingBalance()+this.getSavingsBalance();
-        System.out.println("Your total amount from bot Checking and Savings account is: $"+sum);
+        System.out.println("Your total amount from both Checking and Savings account is: $"+sum);
     }
 }
