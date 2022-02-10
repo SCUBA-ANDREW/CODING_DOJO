@@ -1,0 +1,14 @@
+package com.andrewlee.zookeeper;
+
+public class Gorilla extends Mammal{
+	public void throwSomething() {
+		
+	}
+	public void eatBananas() {
+		
+	}
+	public void climb() {
+		
+	}
+	
+}

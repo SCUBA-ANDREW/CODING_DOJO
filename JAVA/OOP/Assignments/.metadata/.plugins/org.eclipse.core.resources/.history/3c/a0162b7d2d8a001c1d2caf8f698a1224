@@ -1,20 +1,16 @@
 package com.andrewlee.zookeeper;
 
 public class Gorilla extends Mammal{
-	public Gorilla() {
-		
-	}
 	public void throwSomething() {
-		System.out.println("You throw something to somewhere, and felt tired");
+		System.out.println("You throw something to somewhere, and feel tired");
 		this.setEnergyLevel(this.getEnergyLevel()-5);
 	}
 	public void eatBananas() {
-		System.out.println("You ate a banana and felt better");
+		System.out.println("You eat a banana and feel better");
 		this.setEnergyLevel(this.getEnergyLevel()+10);
 	}
 	public void climb() {
-		System.out.println("You climbed a, and felt tired");
-		this.setEnergyLevel(this.getEnergyLevel()-10);
+		
 	}
 	
 }

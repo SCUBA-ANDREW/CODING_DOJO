@@ -1,9 +1,6 @@
 package com.andrewlee.zookeeper;
 
 public class Gorilla extends Mammal{
-	public Gorilla() {
-		
-	}
 	public void throwSomething() {
 		System.out.println("You throw something to somewhere, and felt tired");
 		this.setEnergyLevel(this.getEnergyLevel()-5);
