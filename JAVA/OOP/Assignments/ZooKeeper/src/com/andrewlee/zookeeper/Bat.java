@@ -2,6 +2,7 @@ package com.andrewlee.zookeeper;
 
 public class Bat extends Mammal{
 	public Bat() {
+		super();
 		this.setEnergyLevel(300);
 	}
 	public void fly() {

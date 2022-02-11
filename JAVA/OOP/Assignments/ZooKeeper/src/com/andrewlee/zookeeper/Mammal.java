@@ -1,7 +1,10 @@
 package com.andrewlee.zookeeper;
 
 public class Mammal {
-	private int energyLevel;
+	protected int energyLevel;
+	public Mammal() {
+		this.energyLevel=100;
+	}
 	public int getEnergyLevel() {
 		return energyLevel;
 	}
@@ -10,9 +13,6 @@ public class Mammal {
 		this.energyLevel = energyLevel;
 	}
 
-	public Mammal() {
-		this.energyLevel=100;
-	}
 	
 	public int displayEnergy() {
 		System.out.println("Current Energy Level: "+this.energyLevel);

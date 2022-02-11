@@ -1,0 +1,5 @@
+package com.andrewlee.daikichiroutes.controllers;
+
+public class APIController {
+
+}

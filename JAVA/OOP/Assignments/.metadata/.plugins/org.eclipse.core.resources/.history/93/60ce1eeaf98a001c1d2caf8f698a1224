@@ -1,0 +1,5 @@
+package com.andrewlee.routesdemo.controllers;
+
+public class APIController {
+
+}
