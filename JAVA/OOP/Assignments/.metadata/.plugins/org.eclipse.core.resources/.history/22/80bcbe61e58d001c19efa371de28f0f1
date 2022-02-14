@@ -1,0 +1,31 @@
+package com.andrewlee.daikichipath.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+@RequestMapping("/daikichi")
+@RestController
+public class APIController {
+	//RequestMapping is defaulted as "Get" - C"R"UD
+	@RequestMapping("") //auto import: command shift O
+	public String index() {
+		return "Welcome!";
+	}
+	
+	@RequestMapping("/travel")
+	public String travel(@RequestParam("place")String place) {
+		return "Congratualations! You will soon travel to "+place;
+	}
+	
+	//option3: GetMapping/PostMapping/PutMapping/DeleteMapping
+	@GetMapping("/lotto")
+	public String lotto(@RequestParam("number") Integer number) {
+		if(num%2==1) {
+			return "Tomorrow, an opportunity will arise. so be sure to be open to new ideas!";			
+		}
+		else {
+			return "";
+		}
+	}
+}
