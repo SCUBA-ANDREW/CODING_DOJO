@@ -1761,3 +1761,144 @@ Binding(COMMAND+SHIFT+C,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 14:13:45.625
 !MESSAGE executing callback sts4.classpath.tcKEwhTd SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:18:59.708
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.tcKEwhTd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:18:59.710
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.tcKEwhTd
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:18:59.710
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:18:59.710
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.tcKEwhTd => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:12.198
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:12.199
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@570d2cb6[org.springframework.tooling.boot.ls:1.30.0.202201310805(id=558)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:12.199
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.308
+!MESSAGE Boot LS startup time from start to initialized: 1089ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ANKAJPvxisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ANKAJPvx => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.327
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.328
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.328
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx webdemo false 85
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.328
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx CareSoft false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE classpath=17 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx ZooKeeper false 17
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.329
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.330
+!MESSAGE classpath=82 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.330
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx daikichipath false 82
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.330
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.331
+!MESSAGE classpath=82 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.331
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx daikichiroutes false 82
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.331
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.331
+!MESSAGE classpath=82 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.332
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx routesdemo false 82
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.332
+!MESSAGE executing callback sts4.classpath.ANKAJPvx 6 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 20:33:13.478
+!MESSAGE executing callback sts4.classpath.ANKAJPvx SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:22:53.082
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:22:53.083
+!MESSAGE classpath=82 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:22:53.083
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx fruityloops false 82
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:22:53.083
+!MESSAGE executing callback sts4.classpath.ANKAJPvx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:22:53.092
+!MESSAGE executing callback sts4.classpath.ANKAJPvx SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:25:43.058
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:25:43.059
+!MESSAGE classpath=85 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:25:43.059
+!MESSAGE buffering callback sts4.classpath.ANKAJPvx fruityloops false 85
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:25:43.059
+!MESSAGE executing callback sts4.classpath.ANKAJPvx 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-02-14 21:25:43.067
+!MESSAGE executing callback sts4.classpath.ANKAJPvx SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 2 0 2022-02-14 21:28:19.924
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)

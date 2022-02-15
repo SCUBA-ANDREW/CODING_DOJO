@@ -10,6 +10,27 @@
 </head>
 <body>
 <h1>jstl demo</h1>
-
+<h2>Displaying variables</h2>
+	<p><c:out value="${petname} "></c:out></p>
+	<p>${petname } is ${age } years old. </p>
+<h2>C:if</h2>
+	<c:if test="${alive==true }">
+		<p>${petname } is alive</p>
+	</c:if>
+<h2>if-else -- c:choose, c:when, c:otherwise</h2>
+	<c:choose>
+		<c:when test="${petname.length()>5 }">
+			<p>This is a long name</p>
+		</c:when>
+		<c:otherwise>
+			<p>This name is easy to remember</p>
+		</c:otherwise>
+	</c:choose>
+<h2>For Loop</h2>
+	<ol>
+		<c:forEach var="pet" items="${pets }">
+			<li>${pet }</li>
+		</c:forEach>
+	</ol>
 </body>
 </html>

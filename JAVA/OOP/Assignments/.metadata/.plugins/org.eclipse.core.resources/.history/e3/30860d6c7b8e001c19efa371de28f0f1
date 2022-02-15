@@ -1,0 +1,5 @@
+package com.andrewlee.webdemo.models;
+
+public class Skill {
+
+}
