@@ -1,0 +1,26 @@
+package com.andrewlee.omikujiform.controllers;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+	@GetMapping("/omikuji")
+	public String index(Model model) {
+		return "index.jsp";
+	}
+	@GetMapping("/submit")
+	public String submit(HttpSession session) {
+		
+	}
+	
+	@GetMapping("/omikuji/show")
+	public String show(Model model) {
+		return "show.jsp";
+	}
+	
+}

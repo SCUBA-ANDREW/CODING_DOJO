@@ -9,6 +9,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<h1>Skills</h1>
+	<ul>
+		<c:forEach var="skill" items="${skills }">
+			<li>Skill: ${skill.getSkillName()} | Level:${skill.level}</li>
+		</c:forEach>
+	</ul>
 
 </body>
 </html>

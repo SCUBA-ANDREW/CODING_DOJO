@@ -1,0 +1,29 @@
+package com.andrewlee.omikujiform.models;
+
+public class omikuji {
+
+	
+	private Integer pickNumber;
+	private String city;
+	private String endeavor;
+	private String livingThing;
+	private String sayNice;
+	
+	public omikuji() {
+		
+	}
+	public omikuji(Integer pickNumber, String city, String endeavor, String livingThing, String sayNice) {
+		this.setPickNumber(pickNumber);
+		this.city=city;
+		this.endeavor=endeavor;
+		this.livingThing=livingThing;
+		this.sayNice=sayNice;
+	}
+	public Integer getPickNumber() {
+		return pickNumber;
+	}
+	public void setPickNumber(Integer pickNumber) {
+		this.pickNumber = pickNumber;
+	}
+	
+}

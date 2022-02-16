@@ -1,0 +1,5 @@
+package com.andrewlee.omikujiform.controllers;
+
+public class HomeController {
+
+}
