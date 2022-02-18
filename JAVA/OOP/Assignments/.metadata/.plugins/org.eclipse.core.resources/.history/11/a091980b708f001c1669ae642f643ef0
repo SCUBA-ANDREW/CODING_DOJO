@@ -1,0 +1,5 @@
+package com.andrewlee.bookapi.models;
+
+public class Book {
+
+}

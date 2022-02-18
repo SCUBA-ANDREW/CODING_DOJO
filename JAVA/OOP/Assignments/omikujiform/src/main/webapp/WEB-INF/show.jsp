@@ -21,7 +21,10 @@
    <h1>Here's Your Omikuji!</h1>
 
 	<div class="container">
+	<div class="bg-primary p-5 text-light">
+	
 	<p>In ${pickNumber } years, you will live in ${city } with ${name } as your roommate, ${endeavor } for living. The next time you see a ${livingThing }, you will have good luck. Also, ${sayNice }</p>
+	</div>
 
 	<a href='/omikuji'>Go Back</a>
 	

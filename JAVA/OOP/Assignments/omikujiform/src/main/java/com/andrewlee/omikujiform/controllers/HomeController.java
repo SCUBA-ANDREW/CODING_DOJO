@@ -42,7 +42,7 @@ public class HomeController {
 	}
 	
 	@GetMapping("/omikuji/show")
-	public String show(Model model) {
+	public String show() {
 		return "show.jsp";
 	}
 	
