@@ -1,0 +1,17 @@
+package com.andrewlee.savetravels.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import com.andrewlee.savetravels.models.Expense;
+
+@Controller
+public class STController {
+	
+	@GetMapping("/expenses")
+	public String mainPage(@ModelAttribute("newForm") Expense expense) {
+		return "index.jsp";
+	}
+	
+}

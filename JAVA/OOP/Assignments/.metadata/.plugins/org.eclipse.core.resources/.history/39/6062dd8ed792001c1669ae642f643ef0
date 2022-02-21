@@ -1,0 +1,11 @@
+package com.andrewlee.savetravels.repositories;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.andrewlee.savetravels.models.Expense;
+
+@Repository
+public interface ExpenseRepo extends CrudRepository<Expense, Long> {
+
+}

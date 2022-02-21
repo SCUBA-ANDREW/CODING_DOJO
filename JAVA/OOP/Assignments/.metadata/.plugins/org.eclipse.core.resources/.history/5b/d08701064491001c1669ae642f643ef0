@@ -1,0 +1,13 @@
+package com.andrewlee.savetravels.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class STController {
+	
+	@GetMapping("/expenses")
+	public String mainPage() {
+		return "index.jsp";
+	}
+	
+}

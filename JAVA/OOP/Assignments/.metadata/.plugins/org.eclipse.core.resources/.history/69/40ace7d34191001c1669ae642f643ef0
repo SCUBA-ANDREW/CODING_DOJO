@@ -1,0 +1,18 @@
+package com.andrewlee.savetravels.models;
+
+public class STModel {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	private String expense;
+	private String vendor;
+	private Double amount;
+	private String description;
+	// This will not allow the createdAt column to be updated after creation
+    @Column(updatable=false)
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date createdAt;
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    private Date updatedAt;
+}

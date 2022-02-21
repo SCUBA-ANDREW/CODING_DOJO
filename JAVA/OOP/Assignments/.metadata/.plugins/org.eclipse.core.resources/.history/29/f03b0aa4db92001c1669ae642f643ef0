@@ -1,0 +1,78 @@
+package com.andrewlee.savetravels.controllers;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.andrewlee.savetravels.models.Expense;
+import com.andrewlee.savetravels.services.STService;
+
+@Controller
+public class STController {
+	private final STService stService;
+	public STController(STService stService) {
+		this.stService=stService;
+	}
+	
+	
+	@GetMapping("/expenses")
+	public String mainPage(@ModelAttribute("newForm") Expense expense) {
+		return "index.jsp";
+	}
+	
+	//C
+	@PostMapping("/create")
+	public String create(
+	    @RequestParam("exp") String exp,
+	    @RequestParam("description") String description,
+	    @RequestParam("amount") String amount,
+	    @RequestParam("vendor") Integer vendor,) 
+	{
+	    // CODE TO MAKE A NEW BOOK AND SAVE TO THE DB
+	    Expense expense = new Expense(exp, description, amount, vendor);
+	    stService.createExpense(expense);
+	    return "redirect:/expenses";
+	}
+	
+	
+	
+	//R
+	@RequestMapping("/expenses/{id}")
+    public Expense show(@PathVariable("id") Long id) {
+		Expense expense = stService.findExpense(id);
+        return expense;
+    }
+	
+	
+	
+	//U
+	@RequestMapping("/expenses//edit/{id}")
+    public String edit(@PathVariable("id") Long id, Model model) {
+        Expense expense = stService.findExpense(id);
+        model.addAttribute("expense", expense);
+        return "edit.jsp";
+    }
+    
+    @RequestMapping(value="/expenses/{id}/update", method=RequestMethod.PUT)
+    public String update(@Valid @ModelAttribute("expense") Expense expense, BindingResult result) {
+        if (result.hasErrors()) {
+            return "edit.jsp";
+        } else {
+            stService.updateExpense(expense);
+            return "redirect:/expenses";
+        }
+    }
+    
+    
+    //D
+	
+}

@@ -1,0 +1,7 @@
+package com.andrewlee.savetravels.controllers;
+
+@Controller
+public class STController {
+
+	
+}

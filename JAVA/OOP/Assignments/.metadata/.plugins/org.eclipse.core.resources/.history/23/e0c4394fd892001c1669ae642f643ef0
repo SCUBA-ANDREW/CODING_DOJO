@@ -1,0 +1,18 @@
+package com.andrewlee.savetravels.services;
+
+
+
+import org.springframework.stereotype.Service;
+
+import com.andrewlee.savetravels.models.Expense;
+
+@Service
+public class STService {
+	
+
+	public static Expense findExpense(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

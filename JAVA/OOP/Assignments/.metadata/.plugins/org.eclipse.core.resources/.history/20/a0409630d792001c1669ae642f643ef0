@@ -1,0 +1,14 @@
+package com.andrewlee.savetravels.services;
+
+
+
+import com.andrewlee.savetravels.models.Expense;
+
+public class STService {
+
+	public static Expense findExpense(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
