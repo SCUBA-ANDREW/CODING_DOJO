@@ -7,14 +7,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
+
 import com.andrewlee.loginandreg.models.LoginUser;
 import com.andrewlee.loginandreg.models.User;
+
 import com.andrewlee.loginandreg.repo.UserRepo;
 
 @Service
 public class UserService {
 	@Autowired
 	private UserRepo userRepo;
+	
+
+	
 	
 	public User register(User newUser, BindingResult result) {
 		if(userRepo.findByEmail(newUser.getEmail()).isPresent()) {
@@ -52,7 +57,6 @@ public class UserService {
 			return user;
 		}
 	}
-	
 	
 	
 }
