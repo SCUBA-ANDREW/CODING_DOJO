@@ -63,8 +63,11 @@
 
 		<c:choose>
 			<c:when test="${book.user.id==user_id }">
-				<a href="/books/${book.id}/edit" class="btn btn-succuss">edit</a>
-
+				<a href="/books/${book.id}/edit" class="btn btn-success">edit</a>
+				<form action="/books/${book.id}/delete" method="post">
+					<input type="hidden" name="_method" value="delete"> <input
+						type="submit" value="Delete" class="btn btn-danger">
+				</form>
 			</c:when>
 		</c:choose>
 
