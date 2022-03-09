@@ -19,4 +19,23 @@
 */
 const myArr = [3,2,9,5,1,4,8]
 
-function selectionSort(arr){ }
+function selectionSort(arr){ 
+    for(let i=0;i<arr.length-1;i++){
+        let minIdx = i;
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[j]<arr[minIdx]){
+                minIdx = j;
+            }
+        }
+        let temp = arr[minIdx];
+        arr[minIdx]=arr[i];
+        arr[i]=temp;
+    }
+    return arr;
+    
+}
+
+
+
+console.log(selectionSort(myArr));
+// console.log(myArr);
