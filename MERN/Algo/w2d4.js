@@ -26,13 +26,13 @@
 // given: [3,3]
 // target: 6
 // output: [0,1]
- 
-function twoSums(arr, target) { 
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]<target){
-            let tempArr=[i];
-            for(let j=i+1;j<arr.length;j++){
-                if(arr[i]+arr[j]==target){
+
+function twoSums(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < target) {
+            let tempArr = [i];
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] + arr[j] == target) {
                     tempArr.push(j);
                     return tempArr;
                 }
@@ -41,25 +41,25 @@ function twoSums(arr, target) {
     }
 }
 
-function twoSums2(arr, target) { 
-    let r1=0;
-    let r2=1;
-    let tempArr=[];
-    let ind=false;
-    while(!ind){
-        if(r2==arr.length){
+function twoSums2(arr, target) {
+    let r1 = 0;
+    let r2 = 1;
+    let tempArr = [];
+    let ind = false;
+    while (!ind) {
+        if (r2 == arr.length) {
             r1++;
-            r2=r1+1;
-        }else if(r1==arr.length-1){
-            ind=true;
+            r2 = r1 + 1;
+        } else if (r1 == arr.length - 1) {
+            ind = true;
             console.log("can't find twoSum index");
         }
-        else{
-            if(arr[r1]+arr[r2]==target){
+        else {
+            if (arr[r1] + arr[r2] == target) {
                 tempArr.push(r1);
                 tempArr.push(r2);
                 return tempArr;
-            }else{
+            } else {
                 r2++
             }
         }
