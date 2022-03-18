@@ -44,10 +44,10 @@ function diagonalDifference(sqrMatrix) {
 
     for (let i = 0; i < sqrMatrix.length; i++) {
         r1 = i;
-        r2 = sqrMatrix.length -1- i;
-        sum1+=sqrMatrix[r1][r1]
+        r2 = sqrMatrix.length - 1 - i;
+        sum1 += sqrMatrix[r1][r1]
         // console.log("right"+sqrMatrix[r1][r1]);
-        sum2+=sqrMatrix[r1][r2]
+        sum2 += sqrMatrix[r1][r2]
         // console.log("left"+sqrMatrix[r1][r1]);
 
     }
