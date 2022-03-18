@@ -46,13 +46,28 @@ function diagonalDifference(sqrMatrix) {
         r1 = i;
         r2 = sqrMatrix.length - 1 - i;
         sum1 += sqrMatrix[r1][r1]
-        // console.log("right"+sqrMatrix[r1][r1]);
+        // console.log("right\"+sqrMatrix[r1][r1]);
         sum2 += sqrMatrix[r1][r2]
-        // console.log("left"+sqrMatrix[r1][r1]);
+        // console.log("left/"+sqrMatrix[r1][r2]);
 
     }
     // console.log("sum1: "+sum1);
     // console.log("sum2: "+sum2);
     return (sum1 - sum2);
 }
-console.log(diagonalDifference(squareMatrix1));
+// console.log(diagonalDifference(squareMatrix1));
+console.log(whileSolution(squareMatrix1));
+
+function whileSolution(arr) {
+    let r1 = 0;
+    let r2 = arr.length - 1;
+    let sum1 = 0;
+    let sum2 = 0;
+    while (r1 < arr.length) {
+        sum1 += arr[r1][r1]
+        sum2 += arr[r1][r2]
+        r1++
+        r2--
+    }
+    return (sum1 - sum2)
+}
