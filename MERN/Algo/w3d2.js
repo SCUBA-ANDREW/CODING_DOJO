@@ -75,7 +75,11 @@ function insert(tableName, columnValuePairs) {
             str2+=", ";
         }
         str1+=key;
-        str2+="'"+columnValuePairs[key]+"'";
+        if(typeof columnValuePairs[key] =="string"){
+            str2+="'"+columnValuePairs[key]+"'";
+        }else{
+            str2+=columnValuePairs[key]
+        }
     }
     return str1+str2+str3;
 }
