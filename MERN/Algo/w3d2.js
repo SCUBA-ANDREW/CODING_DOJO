@@ -28,11 +28,13 @@ const expected2 = [
 obj1.__proto__ = obj2;
 
 function entries(obj) {
-    let tempArr = [];
+    let arr = []
     for (key in obj) {
-        tempArr.push([key, obj[key]])
+      if (obj.hasOwnProperty(key)) {
+        arr.push([key, obj[key]])
     }
-    return tempArr;
+    }
+    return arr
 }
 
 // console.log(entries(obj1));
