@@ -27,9 +27,15 @@ const expected2 = [
 
 obj1.__proto__ = obj2;
 
-function entries(obj) { }
+function entries(obj) {
+    let tempArr = [];
+    for (key in obj) {
+        tempArr.push([key, obj[key]])
+    }
+    return tempArr;
+}
 
-console.log(entries(obj1));
+// console.log(entries(obj1));
 
 // ==================================================
 
@@ -56,7 +62,22 @@ const expectedB =
     "INSERT INTO users (first_name, last_name, age, is_admin) VALUES ('John', 'Doe', 30, false);";
 // Explanation: no quotes around the int or the bool, technically in SQL the bool would become a 0 or 1, but don't worry about that here.
 
-function insert(tableName, columnValuePairs) { 
-    let tempArr=[];
-    // for(){}
+function insert(tableName, columnValuePairs) {
+    let checkFirst=true;
+    let str1="INSERT INTO "+tableName+" (";
+    let str2=") VALUES (";
+    let str3=");";
+    for(key in columnValuePairs){
+        if(checkFirst){
+            checkFirst=false;
+        }else{
+            str1+=", ";
+            str2+=", ";
+        }
+        str1+=key;
+        str2+="'"+columnValuePairs[key]+"'";
+    }
+    return str1+str2+str3;
 }
+
+console.log(insert(table, insertData2));
