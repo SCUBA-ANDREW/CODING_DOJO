@@ -30,9 +30,9 @@ obj1.__proto__ = obj2;
 function entries(obj) {
     let arr = []
     for (key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        arr.push([key, obj[key]])
-    }
+        if (obj.hasOwnProperty(key)) {
+            arr.push([key, obj[key]])
+        }
     }
     return arr
 }
@@ -42,10 +42,10 @@ function entries(obj) {
 // ==================================================
 
 /* 
-  Given a table name string and an object whose key value pairs represent column names and values for the columns
-  return a SQL insert statement string
-  Tip: string interpolation (using back ticks, the key to the left of num 1 key)
-  Bonus: after solving it, write a 2nd solution focusing on functional programming using built in methods
+Given a table name string and an object whose key value pairs represent column names and values for the columns
+return a SQL insert statement string
+Tip: string interpolation (using back ticks, the key to the left of num 1 key)
+Bonus: after solving it, write a 2nd solution focusing on functional programming using built in methods
 */
 
 const table = "users";
@@ -65,25 +65,25 @@ const expectedB =
 // Explanation: no quotes around the int or the bool, technically in SQL the bool would become a 0 or 1, but don't worry about that here.
 
 function insert(tableName, columnValuePairs) {
-    let checkFirst=true;
-    let str1="INSERT INTO "+tableName+" (";
-    let str2=") VALUES (";
-    let str3=");";
-    for(key in columnValuePairs){
-        if(checkFirst){
-            checkFirst=false;
-        }else{
-            str1+=", ";
-            str2+=", ";
+    let checkFirst = true;
+    let str1 = "INSERT INTO " + tableName + " (";
+    let str2 = ") VALUES (";
+    let str3 = ");";
+    for (key in columnValuePairs) {
+        if (checkFirst) {
+            checkFirst = false;
+        } else {
+            str1 += ", ";
+            str2 += ", ";
         }
-        str1+=key;
-        if(typeof columnValuePairs[key] =="string"){
-            str2+="'"+columnValuePairs[key]+"'";
-        }else{
-            str2+=columnValuePairs[key]
+        str1 += key;
+        if (typeof columnValuePairs[key] == "string") {
+            str2 += "'" + columnValuePairs[key] + "'";
+        } else {
+            str2 += columnValuePairs[key]
         }
     }
-    return str1+str2+str3;
+    return str1 + str2 + str3;
 }
 
 console.log(insert(table, insertData2));
