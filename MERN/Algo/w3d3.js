@@ -37,11 +37,25 @@ const students = [
     }
 ];
 
-function findByIdAndUpdate(id, updatedVals, collection) { }
+function findByIdAndUpdate(id, updatedVals, collection) {
+    for (key of collection) {
+        if (key.id == id) {
+            for(item in updatedVals)
+            if (key.hasOwnProperty(item)) {
+                key[item]=updatedVals[item]
+            }
+        }
+    }
+    return collection;
+}
+// console.log("---------test case 1----------------");
+// console.log(findByIdAndUpdate(3, { redBeltStatus: true }, students));
+// console.log("---------test case 2----------------");
 
-console.log(findByIdAndUpdate(3, { redBeltStatus: true }, students));
-console.log(findByIdAndUpdate(1, { isLateToday: true, lateCount: 16, randomKey: "randomValue"  }, students));
-console.log(findByIdAndUpdate(5, {}, students));
+// console.log(findByIdAndUpdate(1, { isLateToday: true, lateCount: 16, randomKey: "randomValue" }, students));
+// console.log("---------test case 3----------------");
+
+// console.log(findByIdAndUpdate(5, {}, students));
 
 // --- TEST the following: ---
 // Input: 3, { redBeltStatus: true }, students
