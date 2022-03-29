@@ -37,7 +37,16 @@ function dropIt1(arr, callback) {
     }
     return result;
 }
-
+function dropIt(arr, callback) {
+    let newArr = []
+    for(let i=0;i<arr.length;i++){
+        if(callback(arr[i]) == true){
+            newArr = arr.slice(i);
+            break;
+        }
+    }
+    return newArr
+}
 
 
 // console.log(dropIt1(arr1, callback1));
